@@ -53,8 +53,8 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 			'products',
 		);
 
-		$this->method_title       = __( 'Express Payments: Internet-Acquiring', 'woocommerce-gateway-expresspay-card' );
-		$this->method_description = __( 'Payment by card service "Express Payments".', 'woocommerce-gateway-expresspay-card' );
+		$this->method_title       = __( 'Express Payments: Internet-Acquiring', 'wordpress_card_expresspay' );
+		$this->method_description = __( 'Payment by card service "Express Payments".', 'wordpress_card_expresspay' );
 
 		$this->title = $this->get_option('payment_method_title');
 		$this->description = $this->get_option('payment_method_description');
@@ -94,14 +94,14 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 
 	public function admin_options() {
 		?>
-		<h3><?php echo __('Express Payments: Internet-Acquiring', 'woocommerce-gateway-expresspay-card'); ?></h3>
+		<h3><?php echo __('Express Payments: Internet-Acquiring', 'wordpress_card_expresspay'); ?></h3>
 		<div style="display: inline-block;">
 			 <a target="_blank" href="https://express-pay.by"><img src="<?php echo WC_ExpressPay_Erip_Payments::plugin_url(); ?>/assets/images/erip_expresspay_big.png" alt="exspress-pay.by" title="express-pay.by"></a>
 		</div>
 		<div style="margin-left: 6px; display: inline-block;">
 			<?php _e('Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API.
 			<br/>The plugin allows you to issue an invoice for a card payment, receive and process a payment notification.
-			<br/>The plugin description is available at: ', 'woocommerce-gateway-expresspay-card'); ?><a target="blank" href="https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x">https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x</a>
+			<br/>The plugin description is available at: ', 'wordpress_card_expresspay'); ?><a target="blank" href="https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x">https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x</a>
 		</div>
 
 		<table class="form-table">
@@ -111,8 +111,8 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		</table>
 
 		<div class="copyright" style="text-align: center;">
-			<?php _e("© All rights reserved | ООО «TriInkom»,", 'woocommerce-gateway-expresspay-card'); ?> 2013-<?php echo date("Y"); ?><br/>
-			<?php echo __('Version', 'woocommerce-gateway-expresspay-card') . " " . EXPRESSPAY_CARD_VERSION ?>			
+			<?php _e("© All rights reserved | ООО «TriInkom»,", 'wordpress_card_expresspay'); ?> 2013-<?php echo date("Y"); ?><br/>
+			<?php echo __('Version', 'wordpress_card_expresspay') . " " . EXPRESSPAY_CARD_VERSION ?>			
 		</div>
 		<?php
 	}
@@ -124,117 +124,117 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		
 		$this->form_fields = array(
 			'enabled' => array(
-				'title'   => __('Enable/Disable', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Enable/Disable', 'wordpress_card_expresspay'),
 				'type'    => 'checkbox',
 				'default' => 'no'
 			),
 			'hide_for_non_admin_users' => array(
 				'type'    => 'checkbox',
-				'label'   => __( 'Hide at checkout for non-admin users', 'woocommerce-gateway-expresspay-card' ),
+				'label'   => __( 'Hide at checkout for non-admin users', 'wordpress_card_expresspay' ),
 				'default' => 'no',
 			),
 			'token' => array(
-				'title'   => __('Token', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Token', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('Generated in the panel express-pay.by', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('Generated in the panel express-pay.by', 'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'service_id' => array(
-				'title'   => __('Service number', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Service number', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('Service number in express-pay.by', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('Service number in express-pay.by', 'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'secret_key' => array(
-				'title'   => __('Secret word for signing invoices', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Secret word for signing invoices', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('A secret word that is known only to the server and the client. Used to generate a digital signature. Set in the panel express-pay.by', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('A secret word that is known only to the server and the client. Used to generate a digital signature. Set in the panel express-pay.by', 'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'handler_url' => array(
-				'title'   => __('Address for notifications', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Address for notifications', 'wordpress_card_expresspay'),
 				'type'    => 'text',
 				'css' => 'display: none;',
 				'description' => get_site_url() . '/?wc-api=expresspay_card&action=notify'
 			),
 			'is_use_signature_notify' => array(
-				'title'   => __('Use digitally sign notifications', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Use digitally sign notifications', 'wordpress_card_expresspay'),
 				'type'    => 'checkbox',
-				'description' => __('Use digitally sign notifications', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('Use digitally sign notifications', 'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'secret_key_notify' => array(
-				'title'   => __('Secret word for signing notifications', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Secret word for signing notifications', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('A secret word that is known only to the server and the client. Used to generate a digital signature. Set in the panel express-pay.by', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('A secret word that is known only to the server and the client. Used to generate a digital signature. Set in the panel express-pay.by', 'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'session_timeout_secs' => array(
-				'title'   => __('Session duration', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Session duration', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('The time interval specified in seconds during which the client can make a payment (ranges from 600 seconds (10 minutes) to 86400 seconds (1 day)). The default is 1200 seconds (20 minutes)', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('The time interval specified in seconds during which the client can make a payment (ranges from 600 seconds (10 minutes) to 86400 seconds (1 day)). The default is 1200 seconds (20 minutes)', 'wordpress_card_expresspay'),
 				'default' => '1200',
 				'desc_tip'    => true
 			),
 			'test_mode' => array(
-				'title'   => __('Use test mode', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Use test mode', 'wordpress_card_expresspay'),
 				'type'    => 'checkbox'
 			),
 			'url_api' => array(
-				'title'   => __('API address', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('API address', 'wordpress_card_expresspay'),
 				'type'    => 'text',
 				'default' => 'https://api.express-pay.by'
 			),
 			'url_sandbox_api' => array(
-				'title'   => __('Test API address', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Test API address', 'wordpress_card_expresspay'),
 				'type'    => 'text',
 				'default' => 'https://sandbox-api.express-pay.by'
 			),
 			'message_success' => array(
-				'title'   => __('Successful order message', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Successful order message', 'wordpress_card_expresspay'),
 				'type'    => 'textarea',
-				'default' => __('Order number "##order_id##" has been successfully paid. Click "continue".', 'woocommerce-gateway-expresspay-card'),
+				'default' => __('Order number "##order_id##" has been successfully paid. Click "continue".', 'wordpress_card_expresspay'),
 				'css'	  => 'min-height: 160px;'
 			),
 			'message_fail' => array(
-				'title'   => __('Order error message', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Order error message', 'wordpress_card_expresspay'),
 				'type'    => 'textarea',
-				'default' => __("An unexpected error occurred while executing the request. Please try again later or contact the store's technical support", 'woocommerce-gateway-expresspay-card'),
+				'default' => __("An unexpected error occurred while executing the request. Please try again later or contact the store's technical support", 'wordpress_card_expresspay'),
 				'css'	  => 'min-height: 160px;'
 			),
 			'status_after_placing' => array(
-				'title'       => __('Status after invoicing', 'woocommerce-gateway-expresspay-card'),
+				'title'       => __('Status after invoicing', 'wordpress_card_expresspay'),
 				'type'        => 'select',
-				'description' => __('The status that the order will have after invoicing', 'woocommerce-gateway-expresspay-card'),
+				'description' => __('The status that the order will have after invoicing', 'wordpress_card_expresspay'),
 				'options'     => wc_get_order_statuses(),
 				'desc_tip'    => true,
 			),
 			'status_after_payment' => array(
-				'title'       => __( 'Status after payment', 'woocommerce-gateway-expresspay-card' ),
+				'title'       => __( 'Status after payment', 'wordpress_card_expresspay' ),
 				'type'        => 'select',
-				'description' => __( 'The status that the order will have after payment', 'woocommerce-gateway-expresspay-card' ),
+				'description' => __( 'The status that the order will have after payment', 'wordpress_card_expresspay' ),
 				'options'     => wc_get_order_statuses(),
 				'desc_tip'    => true,
 			),
 			'status_after_cancellation'    => array(
-				'title'       => __( 'Status after cancellation', 'woocommerce-gateway-expresspay-card' ),
+				'title'       => __( 'Status after cancellation', 'wordpress_card_expresspay' ),
 				'type'        => 'select',
-				'description' => __( 'The status that the order will have after cancellation', 'woocommerce-gateway-expresspay-card' ),
+				'description' => __( 'The status that the order will have after cancellation', 'wordpress_card_expresspay' ),
 				'options'     => wc_get_order_statuses(),
 				'desc_tip'    => true,
 			),
 			'payment_method_title' => array(
-				'title'   => __('Payment method name', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Payment method name', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('The name that will be displayed in the cart when choosing a payment method', 'woocommerce-gateway-expresspay-card'),
-				'default' 	=> __("Express Payments: Internet-Acquiring",'woocommerce-gateway-expresspay-card'),
+				'description' => __('The name that will be displayed in the cart when choosing a payment method', 'wordpress_card_expresspay'),
+				'default' 	=> __("Express Payments: Internet-Acquiring",'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 			'payment_method_description' => array(
-				'title'   => __('Description of the payment method', 'woocommerce-gateway-expresspay-card'),
+				'title'   => __('Description of the payment method', 'wordpress_card_expresspay'),
 				'type'    => 'text',
-				'description' => __('Description that will be displayed in the payment method settings', 'woocommerce-gateway-expresspay-card'),
-				'default' 	=> __("Payment by card service Express Payments",'woocommerce-gateway-expresspay-card'),
+				'description' => __('Description that will be displayed in the payment method settings', 'wordpress_card_expresspay'),
+				'default' 	=> __("Payment by card service Express Payments",'wordpress_card_expresspay'),
 				'desc_tip'    => true
 			),
 		);
@@ -347,14 +347,14 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 			)
 		);
 
-		$order->update_status($this->status_after_payment, __('Invoice paid successfully', 'woocommerce-gateway-expresspay-card'));
+		$order->update_status($this->status_after_payment, __('Invoice paid successfully', 'wordpress_card_expresspay'));
 
 		$html = '';
 
-		$html .= '<h2>' . __('Invoice paid successfully', 'woocommerce-gateway-expresspay-card') . '</h2>';
+		$html .= '<h2>' . __('Invoice paid successfully', 'wordpress_card_expresspay') . '</h2>';
 		$html .= str_replace("##order_id##", $order->get_order_number(), nl2br($this->message_success, true));
 
-		$html .= '<br/><br/><p class="return-to-shop"><a class="button wc-backward" href="' . get_permalink( wc_get_page_id( "shop" ) ) . '">' . __('Proceed', 'woocommerce-gateway-expresspay-card') . '</a></p>';
+		$html .= '<br/><br/><p class="return-to-shop"><a class="button wc-backward" href="' . get_permalink( wc_get_page_id( "shop" ) ) . '">' . __('Proceed', 'wordpress_card_expresspay') . '</a></p>';
 
 		$this->log_info('success', 'End render success page; ORDER ID - ' . $order->get_order_number());
 
@@ -368,11 +368,11 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 
 		$this->log_info('fail', 'Initialization render fail page; ORDER ID - ' . $order->get_order_number());
 
-		$order->update_status($this->status_after_cancellation, __('Invoice not paid', 'woocommerce-gateway-expresspay-card'));
+		$order->update_status($this->status_after_cancellation, __('Invoice not paid', 'wordpress_card_expresspay'));
 
-		$html = '<h2>' . __('Error of payment for the order with a bank card', 'woocommerce-gateway-expresspay-card') . '</h2>';
+		$html = '<h2>' . __('Error of payment for the order with a bank card', 'wordpress_card_expresspay') . '</h2>';
 		$html .= str_replace("##order_id##", $order->get_order_number(), nl2br($this->message_fail, true));
-		$html .= '<br/><br/><p class="return-to-shop"><a class="button wc-backward" href="' . wc_get_checkout_url() . '">' . __('Try again', 'woocommerce-gateway-expresspay-card') . '</a></p>';
+		$html .= '<br/><br/><p class="return-to-shop"><a class="button wc-backward" href="' . wc_get_checkout_url() . '">' . __('Try again', 'wordpress_card_expresspay') . '</a></p>';
 
 		$this->log_info('fail', 'End render fail page; ORDER ID - ' . $order->get_order_number());
 
@@ -422,29 +422,29 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		if (isset($data->CmdType)) {
 			switch ($data->CmdType) {
 				case '1':
-					$order->update_status($this->status_after_payment, __('The bill is paid', 'woocommerce-gateway-expresspay-card'));
+					$order->update_status($this->status_after_payment, __('The bill is paid', 'wordpress_card_expresspay'));
 					$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет оплачен; RESPONSE - ' . $dataJSON);
 					break;
 				case '2':
-					$order->update_status($this->status_after_cancellation, __('Payment canceled', 'woocommerce-gateway-expresspay-card'));
+					$order->update_status($this->status_after_cancellation, __('Payment canceled', 'wordpress_card_expresspay'));
 					$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Платеж отменён; RESPONSE - ' . $dataJSON);
 
 					break;
 				case '3':
 					if ($data->Status == '1') {
-						$order->update_status('pending_payment', __('Invoice awaiting payment', 'woocommerce-gateway-expresspay-card'));
+						$order->update_status('pending_payment', __('Invoice awaiting payment', 'wordpress_card_expresspay'));
 						$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет ожидает оплаты; RESPONSE - ' . $dataJSON);
 					} elseif ($data->Status == '2') {
-						$order->update_status($this->status_after_cancellation, __('Invoice expired', 'woocommerce-gateway-expresspay-card'));
+						$order->update_status($this->status_after_cancellation, __('Invoice expired', 'wordpress_card_expresspay'));
 						$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет просрочен; RESPONSE - ' . $dataJSON);
 					} elseif ($data->Status == '3') {
-						$order->update_status($this->status_after_payment, __('The bill is paid', 'woocommerce-gateway-expresspay-card'));
+						$order->update_status($this->status_after_payment, __('The bill is paid', 'wordpress_card_expresspay'));
 						$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет оплачен; RESPONSE - ' . $dataJSON);
 					} elseif ($data->Status == '5') {
-						$order->update_status($this->status_after_cancellation, __('Invoice canceled', 'woocommerce-gateway-expresspay-card'));
+						$order->update_status($this->status_after_cancellation, __('Invoice canceled', 'wordpress_card_expresspay'));
 						$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет отменен; RESPONSE - ' . $dataJSON);
 					} elseif ($data->Status == '6') {
-						$order->update_status($this->status_after_payment, __('Invoice paid by card', 'woocommerce-gateway-expresspay-card'));
+						$order->update_status($this->status_after_payment, __('Invoice paid by card', 'wordpress_card_expresspay'));
 						$this->log_info('notify_success', 'Initialization to update status. STATUS ID - Счет оплачен картой; RESPONSE - ' . $dataJSON);
 					}
 					break;

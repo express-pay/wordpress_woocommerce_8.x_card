@@ -12,10 +12,10 @@ msgstr ""
 "POT-Creation-Date: 2024-10-04T08:57:57+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
-"X-Domain: woocommerce-gateway-expresspay-card\n"
+"X-Domain: wordpress_card_expresspay\n"
 
 #. Plugin Name of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 #: includes/class-wc-gateway-expresspay-card.php:56
 #: includes/class-wc-gateway-expresspay-card.php:96
 #: includes/class-wc-gateway-expresspay-card.php:229
@@ -23,22 +23,22 @@ msgid "Express Payments: Internet-Acquiring"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "https://express-pay.by/cms-extensions/wordpress"
 msgstr ""
 
 #. Description of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API. The plugin allows you to issue invoices for payments by bank cards, receive and process notifications about payments by bank cards. The plugin description is available at: <a target=\"blank\" href=\"https://express-pay.by/cms-extensions/wordpress\">https://express-pay.by/cms-extensions/wordpress</a>"
 msgstr ""
 
 #. Author of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "LLC \"TriInkom\""
 msgstr ""
 
 #. Author URI of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "https://express-pay.by/"
 msgstr ""
 

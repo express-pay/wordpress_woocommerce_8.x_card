@@ -16,10 +16,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0.1\n"
-"X-Domain: woocommerce-gateway-expresspay-card\n"
+"X-Domain: wordpress_card_expresspay\n"
 
 #. Plugin Name of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 #: includes/class-wc-gateway-expresspay-card.php:56
 #: includes/class-wc-gateway-expresspay-card.php:96
 #: includes/class-wc-gateway-expresspay-card.php:229
@@ -27,12 +27,12 @@ msgid "Express Payments: Internet-Acquiring"
 msgstr "Экспресс Платежи: Интернет-эквайринг"
 
 #. Plugin URI of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "https://express-pay.by/cms-extensions/wordpress"
 msgstr "https://express-pay.by/cms-extensions/wordpress"
 
 #. Description of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid ""
 "Express Payments: Internet-Acquiring - plugin for integration with the "
 "Express Payments service (express-pay.by) via API. The plugin allows you to "
@@ -49,12 +49,12 @@ msgstr ""
 "express-pay.by/cms-extensions/wordpress</a>"
 
 #. Author of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "LLC \"TriInkom\""
 msgstr "ООО «ТриИнком»"
 
 #. Author URI of the plugin
-#: woocommerce-gateway-expresspay-card.php
+#: wordpress_card_expresspay.php
 msgid "https://express-pay.by/"
 msgstr "https://express-pay.by/"
 
