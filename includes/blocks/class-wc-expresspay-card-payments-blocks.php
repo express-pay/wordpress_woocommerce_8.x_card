@@ -52,7 +52,7 @@ final class WC_Gateway_ExpressPay_Card_Blocks_Support extends AbstractPaymentMet
 			? require( $script_asset_path )
 			: array(
 				'dependencies' => array(),
-				'version'      => '1.1.0'
+				'version'      => '1.1.1'
 			);
 		$script_url        = WC_ExpressPay_Card_Payments::plugin_url() . $script_path;
 

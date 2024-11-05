@@ -54,7 +54,7 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		);
 
 		$this->method_title       = __( 'Express Payments: Internet-Acquiring', 'wordpress_card_expresspay' );
-		$this->method_description = __( 'Payment by card service "Express Payments".', 'wordpress_card_expresspay' );
+		$this->method_description = __( 'Payment by card service Express Payments', 'wordpress_card_expresspay' );
 
 		$this->title = $this->get_option('payment_method_title');
 		$this->description = $this->get_option('payment_method_description');

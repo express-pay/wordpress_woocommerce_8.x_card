@@ -1,12 +1,8 @@
-# Copyright (C) 2024 LLC "TriInkom"
-# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Express Payments: Internet-Acquiring 1.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/"
-"wordpress_woocommerce_8.x_card\n"
-"POT-Creation-Date: 2024-10-04T08:57:57+03:00\n"
-"PO-Revision-Date: 2024-10-04 09:25+0300\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-11-05 13:57+0300\n"
+"PO-Revision-Date: 2024-11-05 13:59+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -16,20 +12,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.0.1\n"
-"X-Domain: wordpress_card_expresspay\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#. Plugin Name of the plugin
-#: wordpress_card_expresspay.php
 #: includes/class-wc-gateway-expresspay-card.php:56
-#: includes/class-wc-gateway-expresspay-card.php:96
-#: includes/class-wc-gateway-expresspay-card.php:229
+#: includes/class-wc-gateway-expresspay-card.php:97
+#: includes/class-wc-gateway-expresspay-card.php:230
+#: resources/js/frontend/index.js:10
 msgid "Express Payments: Internet-Acquiring"
 msgstr "Экспресс Платежи: Интернет-эквайринг"
-
-#. Plugin URI of the plugin
-#: wordpress_card_expresspay.php
-msgid "https://express-pay.by/cms-extensions/wordpress"
-msgstr "https://express-pay.by/cms-extensions/wordpress"
 
 #. Description of the plugin
 #: wordpress_card_expresspay.php
@@ -53,16 +46,12 @@ msgstr ""
 msgid "LLC \"TriInkom\""
 msgstr "ООО «ТриИнком»"
 
-#. Author URI of the plugin
-#: wordpress_card_expresspay.php
-msgid "https://express-pay.by/"
-msgstr "https://express-pay.by/"
-
 #: includes/class-wc-gateway-expresspay-card.php:57
-msgid "Payment by card service \"Express Payments\"."
+#: includes/class-wc-gateway-expresspay-card.php:237
+msgid "Payment by card service Express Payments"
 msgstr "Оплата по карте сервис «Экспресс Платежи»"
 
-#: includes/class-wc-gateway-expresspay-card.php:101
+#: includes/class-wc-gateway-expresspay-card.php:102
 msgid ""
 "Express Payments: Internet-Acquiring - plugin for integration with the "
 "Express Payments service (express-pay.by) via API.\n"
@@ -76,44 +65,44 @@ msgstr ""
 "обрабатывать уведомление о платеже.\n"
 "\t\t\t\t<br/>Описание плагина доступно по адресу: "
 
-#: includes/class-wc-gateway-expresspay-card.php:113
+#: includes/class-wc-gateway-expresspay-card.php:114
 msgid "© All rights reserved | ООО «TriInkom»,"
 msgstr "© Все права защищены | ООО «ТриИнком»,"
 
-#: includes/class-wc-gateway-expresspay-card.php:114
+#: includes/class-wc-gateway-expresspay-card.php:115
 msgid "Version"
 msgstr "Версия"
 
-#: includes/class-wc-gateway-expresspay-card.php:126
+#: includes/class-wc-gateway-expresspay-card.php:127
 msgid "Enable/Disable"
 msgstr "Включить/Выключить"
 
-#: includes/class-wc-gateway-expresspay-card.php:132
+#: includes/class-wc-gateway-expresspay-card.php:133
 msgid "Hide at checkout for non-admin users"
 msgstr "Скрыть при оформлении заказа для пользователей без прав администратора"
 
-#: includes/class-wc-gateway-expresspay-card.php:136
+#: includes/class-wc-gateway-expresspay-card.php:137
 msgid "Token"
 msgstr "Токен"
 
-#: includes/class-wc-gateway-expresspay-card.php:138
+#: includes/class-wc-gateway-expresspay-card.php:139
 msgid "Generated in the panel express-pay.by"
-msgstr "Генерируется в панели express-pay.by"
+msgstr "Сгенерировано в панели express-pay.by"
 
-#: includes/class-wc-gateway-expresspay-card.php:142
+#: includes/class-wc-gateway-expresspay-card.php:143
 msgid "Service number"
 msgstr "Номер услуги"
 
-#: includes/class-wc-gateway-expresspay-card.php:144
+#: includes/class-wc-gateway-expresspay-card.php:145
 msgid "Service number in express-pay.by"
 msgstr "Номер услуги в express-pay.by"
 
-#: includes/class-wc-gateway-expresspay-card.php:148
+#: includes/class-wc-gateway-expresspay-card.php:149
 msgid "Secret word for signing invoices"
 msgstr "Секретное слово для подписи счетов"
 
-#: includes/class-wc-gateway-expresspay-card.php:150
-#: includes/class-wc-gateway-expresspay-card.php:168
+#: includes/class-wc-gateway-expresspay-card.php:151
+#: includes/class-wc-gateway-expresspay-card.php:169
 msgid ""
 "A secret word that is known only to the server and the client. Used to "
 "generate a digital signature. Set in the panel express-pay.by"
@@ -121,24 +110,24 @@ msgstr ""
 "Секретного слово, которое известно только серверу и клиенту. Используется "
 "для формирования цифровой подписи. Задается в панели express-pay.by"
 
-#: includes/class-wc-gateway-expresspay-card.php:154
+#: includes/class-wc-gateway-expresspay-card.php:155
 msgid "Address for notifications"
 msgstr "Адрес для уведомлений"
 
-#: includes/class-wc-gateway-expresspay-card.php:160
-#: includes/class-wc-gateway-expresspay-card.php:162
+#: includes/class-wc-gateway-expresspay-card.php:161
+#: includes/class-wc-gateway-expresspay-card.php:163
 msgid "Use digitally sign notifications"
 msgstr "Использовать цифровую подпись для уведомлений"
 
-#: includes/class-wc-gateway-expresspay-card.php:166
+#: includes/class-wc-gateway-expresspay-card.php:167
 msgid "Secret word for signing notifications"
 msgstr "Секретное слово для подписи уведомлений"
 
-#: includes/class-wc-gateway-expresspay-card.php:172
+#: includes/class-wc-gateway-expresspay-card.php:173
 msgid "Session duration"
 msgstr "Продолжительность сессии"
 
-#: includes/class-wc-gateway-expresspay-card.php:174
+#: includes/class-wc-gateway-expresspay-card.php:175
 msgid ""
 "The time interval specified in seconds during which the client can make a "
 "payment (ranges from 600 seconds (10 minutes) to 86400 seconds (1 day)). The "
@@ -148,32 +137,32 @@ msgstr ""
 "совершить платеж (находится в промежутке от 600 секунд (10 минут) до 86400 "
 "секунд (1 сутки) ). По-умолчанию равен 1200 секунд (20 минут)"
 
-#: includes/class-wc-gateway-expresspay-card.php:179
+#: includes/class-wc-gateway-expresspay-card.php:180
 msgid "Use test mode"
 msgstr "Использовать тестовый режим"
 
-#: includes/class-wc-gateway-expresspay-card.php:183
+#: includes/class-wc-gateway-expresspay-card.php:184
 msgid "API address"
 msgstr "Адрес API"
 
-#: includes/class-wc-gateway-expresspay-card.php:188
+#: includes/class-wc-gateway-expresspay-card.php:189
 msgid "Test API address"
 msgstr "Адрес тестового API"
 
-#: includes/class-wc-gateway-expresspay-card.php:193
+#: includes/class-wc-gateway-expresspay-card.php:194
 msgid "Successful order message"
 msgstr "Сообщение при успешном заказе"
 
-#: includes/class-wc-gateway-expresspay-card.php:195
+#: includes/class-wc-gateway-expresspay-card.php:196
 msgid ""
 "Order number \"##order_id##\" has been successfully paid. Click \"continue\"."
 msgstr "Заказ номер \"##order_id##\" успешно оплачен. Нажмите \"продолжить\"."
 
-#: includes/class-wc-gateway-expresspay-card.php:199
+#: includes/class-wc-gateway-expresspay-card.php:200
 msgid "Order error message"
 msgstr "Сообщение при ошибке заказа"
 
-#: includes/class-wc-gateway-expresspay-card.php:201
+#: includes/class-wc-gateway-expresspay-card.php:202
 msgid ""
 "An unexpected error occurred while executing the request. Please try again "
 "later or contact the store's technical support"
@@ -181,94 +170,93 @@ msgstr ""
 "При выполнении запроса произошла непредвиденная ошибка. Пожалуйста, "
 "повторите запрос позже или обратитесь в службу технической поддержки магазина"
 
-#: includes/class-wc-gateway-expresspay-card.php:205
+#: includes/class-wc-gateway-expresspay-card.php:206
 msgid "Status after invoicing"
 msgstr "Статус после выставления счета"
 
-#: includes/class-wc-gateway-expresspay-card.php:207
+#: includes/class-wc-gateway-expresspay-card.php:208
 msgid "The status that the order will have after invoicing"
 msgstr "Статус, который будет иметь заказ после выставления счета"
 
-#: includes/class-wc-gateway-expresspay-card.php:212
+#: includes/class-wc-gateway-expresspay-card.php:213
 msgid "Status after payment"
 msgstr "Статус после оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:214
+#: includes/class-wc-gateway-expresspay-card.php:215
 msgid "The status that the order will have after payment"
 msgstr "Статус, который будет иметь заказ после оплаты счета"
 
-#: includes/class-wc-gateway-expresspay-card.php:219
+#: includes/class-wc-gateway-expresspay-card.php:220
 msgid "Status after cancellation"
 msgstr "Статус после отмены"
 
-#: includes/class-wc-gateway-expresspay-card.php:221
+#: includes/class-wc-gateway-expresspay-card.php:222
 msgid "The status that the order will have after cancellation"
 msgstr "Статус, который будет иметь заказ после отмены счета"
 
-#: includes/class-wc-gateway-expresspay-card.php:226
+#: includes/class-wc-gateway-expresspay-card.php:227
 msgid "Payment method name"
 msgstr "Название метода оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:228
+#: includes/class-wc-gateway-expresspay-card.php:229
 msgid ""
 "The name that will be displayed in the cart when choosing a payment method"
 msgstr ""
 "Название, которое будет отображаться в корзине, при выборе метода оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:233
+#: includes/class-wc-gateway-expresspay-card.php:234
 msgid "Description of the payment method"
 msgstr "Описание метода оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:235
+#: includes/class-wc-gateway-expresspay-card.php:236
 msgid "Description that will be displayed in the payment method settings"
 msgstr "Описание, которое будет отображаться в настройках методах оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:236
-msgid "Payment by card service Express Payments"
-msgstr "Оплата по карте сервис «Экспресс Платежи»"
-
-#: includes/class-wc-gateway-expresspay-card.php:349
-#: includes/class-wc-gateway-expresspay-card.php:353
+#: includes/class-wc-gateway-expresspay-card.php:350
+#: includes/class-wc-gateway-expresspay-card.php:354
 msgid "Invoice paid successfully"
 msgstr "Счет успешно оплачен"
 
-#: includes/class-wc-gateway-expresspay-card.php:356
+#: includes/class-wc-gateway-expresspay-card.php:357
 msgid "Proceed"
 msgstr "Продолжить"
 
-#: includes/class-wc-gateway-expresspay-card.php:370
+#: includes/class-wc-gateway-expresspay-card.php:371
 msgid "Invoice not paid"
 msgstr "Счет не оплачен"
 
-#: includes/class-wc-gateway-expresspay-card.php:372
+#: includes/class-wc-gateway-expresspay-card.php:373
 msgid "Error of payment for the order with a bank card"
 msgstr "Ошибка оплаты заказа банковской картой"
 
-#: includes/class-wc-gateway-expresspay-card.php:374
+#: includes/class-wc-gateway-expresspay-card.php:375
 msgid "Try again"
 msgstr "Попробуйте снова"
 
-#: includes/class-wc-gateway-expresspay-card.php:424
-#: includes/class-wc-gateway-expresspay-card.php:440
+#: includes/class-wc-gateway-expresspay-card.php:425
+#: includes/class-wc-gateway-expresspay-card.php:441
 msgid "The bill is paid"
 msgstr "Счет оплачен"
 
-#: includes/class-wc-gateway-expresspay-card.php:428
+#: includes/class-wc-gateway-expresspay-card.php:429
 msgid "Payment canceled"
 msgstr "Платеж отменен"
 
-#: includes/class-wc-gateway-expresspay-card.php:434
+#: includes/class-wc-gateway-expresspay-card.php:435
 msgid "Invoice awaiting payment"
 msgstr "Счет ожидает оплаты"
 
-#: includes/class-wc-gateway-expresspay-card.php:437
+#: includes/class-wc-gateway-expresspay-card.php:438
 msgid "Invoice expired"
 msgstr "Срок действия счета истек"
 
-#: includes/class-wc-gateway-expresspay-card.php:443
+#: includes/class-wc-gateway-expresspay-card.php:444
 msgid "Invoice canceled"
 msgstr "Счет отменен"
 
-#: includes/class-wc-gateway-expresspay-card.php:446
+#: includes/class-wc-gateway-expresspay-card.php:447
 msgid "Invoice paid by card"
 msgstr "Счет оплачен картой"
+
+#~ msgid "Payment by card service \"Express Payments\"."
+#~ msgstr "Оплата по карте сервис «Экспресс Платежи»"
