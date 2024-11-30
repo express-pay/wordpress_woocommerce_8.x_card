@@ -1,7 +1,7 @@
 {
 	"name": "wordpress_card_expresspay",
 	"title": "Express Payments: Internet-Acquiring",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"author": "LLC TriInkom",
 	"license": "GPL-3.0+",
 	"keywords": [],
