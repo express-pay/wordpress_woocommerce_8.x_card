@@ -4,7 +4,7 @@
  *
  * @author   LLC "TriInkom"
  * @package  WooCommerce Express Payments: Internet-Acquiring Gateway
- * @since    1.1.2
+ * @since    1.1.3
  */
 
 // Exit if accessed directly.
@@ -90,20 +90,16 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		?>
 		<h3><?php echo __('Express Payments: Internet-Acquiring', 'wordpress_card_expresspay'); ?></h3>
 		<div style="display: inline-block;">
-			 <a target="_blank" href="https://express-pay.by"><img src="<?php echo WC_ExpressPay_Card_Payments::plugin_url(); ?>/assets/images/erip_expresspay_big.png" alt="exspress-pay.by" title="express-pay.by"></a>
+			 <a target="_blank" href="https://express-pay.by"><img src="<?php echo WC_ExpressPay_Erip_Payments::plugin_url(); ?>/assets/images/erip_expresspay_big.png" alt="exspress-pay.by" title="express-pay.by"></a>
 		</div>
 		<div style="margin-left: 6px; display: inline-block;">
-			<?php _e('Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API.
-			<br/>The plugin allows you to issue an invoice for a card payment, receive and process a payment notification.
-			<br/>The plugin description is available at: ', 'wordpress_card_expresspay'); ?><a target="blank" href="https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x">https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x</a>
+			<?php _e("Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API. ", 'wordpress_card_expresspay').
+			_e("<br/>The plugin allows you to issue an invoice for a card payment, receive and process a payment notification. ", 'wordpress_card_expresspay').
+			_e("<br/>The plugin description is available at: ", 'wordpress_card_expresspay'); ?><a target="blank" href="https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x">https://express-pay.by/cms-extensions/wordpress#woocommerce_8_x</a>
 		</div>
-
 		<table class="form-table">
-			<?php		
-				$this->generate_settings_html();
-			?>
+			<?php $this->generate_settings_html(); ?>
 		</table>
-
 		<div class="copyright" style="text-align: center;">
 			<?php _e("© All rights reserved | ООО «TriInkom»,", 'wordpress_card_expresspay'); ?> 2013-<?php echo date("Y"); ?><br/>
 			<?php echo __('Version', 'wordpress_card_expresspay') . " " . EXPRESSPAY_CARD_VERSION ?>			
@@ -248,7 +244,7 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 
 		return array(
 			'result' => 'success',
-			'redirect'	=> add_query_arg('order-pay', $order->get_order_number( ), add_query_arg('key', $order->get_order_key(), get_permalink(wc_get_page_id('pay'))))
+			'redirect'	=> add_query_arg('order-pay', $order->get_id(), add_query_arg('key', $order->get_order_key(), get_permalink(wc_get_page_id('pay'))))
 		);
 	}
 	

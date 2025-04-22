@@ -3,7 +3,7 @@
   Plugin Name: Express Payments: Internet-Acquiring
   Plugin URI: https://express-pay.by/cms-extensions/wordpress
   Description: Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API. The plugin allows you to issue invoices for payments by bank cards, receive and process notifications about payments by bank cards. The plugin description is available at: <a target="blank" href="https://express-pay.by/cms-extensions/wordpress">https://express-pay.by/cms-extensions/wordpress</a>
-  Version: 1.1.2
+  Version: 1.1.3
   Author: LLC "TriInkom"
   Author URI: https://express-pay.by/
   License: GPLv2 or later
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-define("EXPRESSPAY_CARD_VERSION", "1.1.2");
+define("EXPRESSPAY_CARD_VERSION", "1.1.3");
 
 /**
  * WC ExpressPay_Card Payment gateway plugin class.

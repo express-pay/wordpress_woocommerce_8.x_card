@@ -51,19 +51,25 @@ msgstr "ООО «ТриИнком»"
 msgid "Payment by card service Express Payments"
 msgstr "Оплата по карте сервис «Экспресс Платежи»"
 
-#: includes/class-wc-gateway-expresspay-card.php:102
+#: includes/class-wc-gateway-expresspay-card.php:96
 msgid ""
 "Express Payments: Internet-Acquiring - plugin for integration with the "
-"Express Payments service (express-pay.by) via API.\n"
-"\t\t\t<br/>The plugin allows you to issue an invoice for a card payment, "
-"receive and process a payment notification.\n"
-"\t\t\t<br/>The plugin description is available at: "
+"Express Payments service (express-pay.by) via API. "
 msgstr ""
 "Экспресс Платежи: Интернет-эквайринг - плагин для интеграции с сервисом "
-"Экспресс Платежи (express-pay.by) через API.\n"
-"\t\t\t\t<br/>Плагин позволяет выставлять счет на оплату картой, получать и "
-"обрабатывать уведомление о платеже.\n"
-"\t\t\t\t<br/>Описание плагина доступно по адресу: "
+"Экспресс Платежи (express-pay.by) через API. "
+
+#: includes/class-wc-gateway-expresspay-card.php:97
+msgid ""
+"<br/>The plugin allows you to issue an invoice for a card payment, receive "
+"and process a payment notification. "
+msgstr ""
+"<br/>Плагин позволяет выставлять счет на оплату картой, получать и "
+"обрабатывать уведомление о платеже. "
+
+#: includes/class-wc-gateway-expresspay-card.php:98
+msgid "<br/>The plugin description is available at: "
+msgstr "<br/>Описание плагина доступно по адресу: "
 
 #: includes/class-wc-gateway-expresspay-card.php:114
 msgid "© All rights reserved | ООО «TriInkom»,"

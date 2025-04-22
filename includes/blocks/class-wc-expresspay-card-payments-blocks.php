@@ -4,7 +4,7 @@ use Automattic\WooCommerce\Blocks\Payments\Integrations\AbstractPaymentMethodTyp
 /**
  * Express Payments: Internet-Acquiring Blocks integration
  *
- * @since 1.1.2
+ * @since 1.1.3
  */
 final class WC_Gateway_ExpressPay_Card_Blocks_Support extends AbstractPaymentMethodType {
 
@@ -52,7 +52,7 @@ final class WC_Gateway_ExpressPay_Card_Blocks_Support extends AbstractPaymentMet
 			? require( $script_asset_path )
 			: array(
 				'dependencies' => array(),
-				'version'      => '1.1.2'
+				'version'      => '1.1.3'
 			);
 		$script_url        = WC_ExpressPay_Card_Payments::plugin_url() . $script_path;
 
