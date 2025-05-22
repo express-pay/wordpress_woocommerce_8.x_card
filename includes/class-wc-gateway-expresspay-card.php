@@ -90,7 +90,7 @@ class WC_Gateway_ExpressPay_Card extends WC_Payment_Gateway {
 		?>
 		<h3><?php echo __('Express Payments: Internet-Acquiring', 'wordpress_card_expresspay'); ?></h3>
 		<div style="display: inline-block;">
-			 <a target="_blank" href="https://express-pay.by"><img src="<?php echo WC_ExpressPay_Erip_Payments::plugin_url(); ?>/assets/images/erip_expresspay_big.png" alt="exspress-pay.by" title="express-pay.by"></a>
+			 <a target="_blank" href="https://express-pay.by"><img src="<?php echo WC_ExpressPay_Card_Payments::plugin_url(); ?>/assets/images/erip_expresspay_big.png" alt="exspress-pay.by" title="express-pay.by"></a>
 		</div>
 		<div style="margin-left: 6px; display: inline-block;">
 			<?php _e("Express Payments: Internet-Acquiring - plugin for integration with the Express Payments service (express-pay.by) via API. ", 'wordpress_card_expresspay').
